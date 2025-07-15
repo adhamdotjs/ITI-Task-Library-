@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="description" content="A Books Library Website" />
+		<link  type="image/png"  sizes="32x32"  rel="icon"  href="./icons8-book-64.png" />
+		<title>Library</title>
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="#" class="web-link"><img src="./icons8-book-64.png" alt="Book" /><h1>Library</h1></a>
+				<a href="#" class="login">Log in</a>
+			</nav>
+		</header>
+		<main>
+			<section class="overlay hidden">
+				<div class="book-form">
+					<form>
+						<h3>Add new book</h3>
+						<input type="text" name="title" id="title" placeholder="Title" />
+						<input type="text" name="author" id="author" placeholder="Author" />
+						<input type="number" name="pages" id="pages" placeholder="Pages" min="1" />
+						<div class="read-check">
+							<label for="have-read">Have you read it?</label>
+							<input type="checkbox" name="have-read" id="have-read" />
+						</div>
+						<input type="submit" name="submit" id="submit" />
+					</form>
+				</div>
+			</section>
+			<section class="add">
+				<button class="addBook">+ Add Book</button>
+			</section>
+			<section class="books"></section>
+		</main>
+		<footer>
+			<p>Copyright &copy; 2025<a href="https://github.com/adhamdotjs">Adham Hesham<i class="fa-brands fa-github"></i></a></p>
+		</footer>
+		<script src="main.js"></script>
+		<!-- Font Awesome -->
+		<script
+			src="https://kit.fontawesome.com/306f44334f.js"
+			crossorigin="anonymous"></script>
+	</body>
+</html>
