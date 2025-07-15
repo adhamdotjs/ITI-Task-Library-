@@ -19,15 +19,16 @@ form.addEventListener("click", (e) => {
 	e.stopPropagation();
 });
 
-let booksArr = JSON.parse(localStorage.getItem("books"));
-//
-displayBooks();
-
-// Toggle Read Status
-toggleReadStatus();
-
-// Remove Book
-removeBook();
+let booksArr = [];
+if (localStorage.getItem("books")) {
+	booksArr = JSON.parse(localStorage.getItem("books"));
+	// Display Books
+	displayBooks();
+	// Toggle Read Status
+	toggleReadStatus();
+	// Remove Book
+	removeBook();
+}
 
 let submitBook = document.querySelector("#submit");
 
@@ -111,7 +112,8 @@ function removeBook() {
 			localStorage.setItem("books", JSON.stringify(booksArr));
 			document.querySelector(".books").innerHTML = "";
 			displayBooks();
-      removeBook();
+			removeBook();
+      toggleReadStatus();
 		});
 	});
 }
